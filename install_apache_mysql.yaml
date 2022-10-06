@@ -22,5 +22,5 @@
         state=presente
     - name: start mysql
       service:
-        name=myssld
+        name=mysqld
         state=started
