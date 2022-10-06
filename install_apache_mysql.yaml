@@ -1,24 +1,38 @@
 ---
 - hosts: webservers
   remote_user: root
+
   tasks:
-  - name: install apache
+  - name: Endure that apache is installed
     yum:
       name=httpd
       state=presente
-  - name: start apache
+  - name: start apache service
     service:
       name=httpd
+      enabled=yes
       state=started
 
 - hosts: dbservers
   remote_user: root
+
   tasks:
-  - name: install mysql
+  - name: Endure that mysql is installed
     yum:
       name=mysql-server
       state=presente
   - name: start mysql
     service:
       name=mysqld
+      enabled=yes
       state=started
+
+- hosts: webservers
+  vars:
+    git_repo: https://github.com/repo.git
+    http_port: 8080
+    db_name: WordPress
+  sudo: yes
+  sudo_user: wordpress_user
+  gather_facts: no
+
