@@ -2,23 +2,23 @@
 - hosts: webservers
   remote_user: root
   tasks:
-    - name: install apache
-      yum:
-        name=httpd
-        state=presente
-    - name: start apache
-      service:
-        name=httpd
-        state=started
+  - name: install apache
+    yum:
+      name=httpd
+      state=presente
+  - name: start apache
+    service:
+      name=httpd
+      state=started
 
 - hosts: dbservers
   remote_user: root
   tasks:
-    - name: install mysql
-      yum:
-        name=mysql-server
-        state=presente
-    - name: start mysql
-      service:
-        name=mysqld
-        state=started
+  - name: install mysql
+    yum:
+      name=mysql-server
+      state=presente
+  - name: start mysql
+    service:
+      name=mysqld
+      state=started
