@@ -7,11 +7,18 @@
     yum:
       name=httpd
       state=presente
+
   - name: start apache service
     service:
       name=httpd
       enabled=yes
       state=started
+
+  - name: deploy apache configuration file
+    copy:
+      src= /ansible/files/conf/https.conf
+      dest= /etc/httpd/conf/
+
 
 - hosts: dbservers
   remote_user: root
@@ -24,7 +31,6 @@
   - name: start mysql
     service:
       name=mysqld
-      enabled=yes
       state=started
 
 - hosts: webservers
