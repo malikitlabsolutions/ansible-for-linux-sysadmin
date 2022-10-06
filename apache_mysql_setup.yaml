@@ -1,0 +1,26 @@
+---
+- name: play1 install apache 
+  hosts: webservers
+  remote_user: root
+  tasks:
+    - name: install apache
+      yum:
+        name=httpd
+        state=presente
+    - name: start apache
+      service:
+        name=httpd
+        state=started
+
+- name: play2 install mysql
+  hosts: dbservers
+  remote_user: root
+  tasks:
+    - name: install mysql
+      yum:
+        name=mysql-server
+        state=presente
+    - name: start mysql
+      service:
+        name=myssld
+        state=started
