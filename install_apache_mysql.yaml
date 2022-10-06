@@ -1,6 +1,5 @@
 ---
-- name: play1 install apache 
-  hosts: webservers
+- hosts: webservers
   remote_user: root
   tasks:
     - name: install apache
@@ -12,8 +11,7 @@
         name=httpd
         state=started
 
-- name: play2 install mysql
-  hosts: dbservers
+- hosts: dbservers
   remote_user: root
   tasks:
     - name: install mysql
