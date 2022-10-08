@@ -1,5 +1,11 @@
 # Commands used in Hands-On-Ansible Mod5 Exercise 1
 
+# list all ansible modules
+$ ansible-doc -l
+
+# Doc for yum module
+$ ansible-doc yum
+
 # Install Apache
 $ ansible webservers -i inventory -m yum -a "name=httpd state=present" --sudo
 
@@ -9,9 +15,19 @@ $ ansible webservers -i inventory -m service -a "name=httpd enabled=yes state=st
 # Install MySQL
 $ ansible dbservers -i inventory -m yum -a "name=mysql-server state=present" --sudo
 
+# test MySQL
+$ ssh vangrant@192.168.33.30
+$ service mysqld status
+
 # Start MySQL
 $ ansible dbservers -i inventory -m service -a "name=mysqld enabled=yes state=started" --sudo
+
+# test MySQL
+$ ssh vangrant@192.168.33.30
+$ service mysqld status
 
 # Stop IPTables on all systems
 $ ansible webservers:dbservers -i inventory -m service -a "name=iptables enabled=no state=stopped" --sudo
 
+# test web server
+http://192.168.33.20
