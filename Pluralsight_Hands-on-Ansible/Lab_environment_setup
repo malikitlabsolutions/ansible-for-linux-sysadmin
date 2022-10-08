@@ -14,6 +14,13 @@
  5.4 cd hands-on-ansible
  5.5 tape vagrant init to create vagrantfile
  5.6 edit vagrantfile see vagrantfile exemple
+    - Ubuntu for ansible contrôler
+    - centos for web server
+    - centos for database server
+ 5.7 tape vagrant UP to start vms
+ 5.8 vboxmanage list runningvms
 
+6. Tape vagrantcloud.com to See all os
+   Centos with chef installed...
 
 
