@@ -8,8 +8,8 @@
 4. Install virtualBox
 
 5. Configure vagrant
- 5.1 open cmd and tape vagrant
- 5.2 vboxmanage
+ 5.1 vérification: cmd and tape vagrant
+ 5.2 vérification: tape vboxmanage
  5.3 create folder hands-on-ansible
  5.4 cd hands-on-ansible
  5.5 tape vagrant init to create vagrantfile
@@ -17,16 +17,18 @@
     - Ubuntu for ansible contrôler (acs vm)
     - centos for web server (web vm)
     - centos for database server (db vm)
- 5.7 tape vagrant up to start vms
- 5.8 vboxmanage list runningvms
+ 5.7 tape vagrant up to download and start vms
+ 5.8 vboxmanage list runningvms (show run vms)
 
 6. Tape vagrantcloud.com to See all os
-   Centos with chef installed...
+   CentOS with chef installed
+   CentOS with Puppet installed
+   ...
 
 7. Install ansible on acs vm
    - tape vagrant ssh acs to connect
    - sudo apt-get install ansible
-   - ansible --version for verification
+   - vérification: ansible --version
 
 8. Install ansible on web vm centos
    - connect with vagrant ssh web
