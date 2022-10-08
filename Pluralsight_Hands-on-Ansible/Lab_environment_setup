@@ -1,6 +1,19 @@
 
-1. Download vagrant (www.vagrant.com)
+1. Download vagrant (www.vagrantup.com)
 
 2. Install vagrant
 
-3. Download ans install virtualbox
+3. Download virtualBox (virtualBox.org)
+
+4. Install virtualBox
+
+5. Configure vagrant
+ 5.1 open cmd and tape vagrant
+ 5.2 vboxmanage
+ 5.3 create folder hands-on-ansible
+ 5.4 cd hands-on-ansible
+ 5.5 tape vagrant init to create vagrantfile
+ 5.6 edit vagrantfile see vagrantfile exemple
+
+
+
