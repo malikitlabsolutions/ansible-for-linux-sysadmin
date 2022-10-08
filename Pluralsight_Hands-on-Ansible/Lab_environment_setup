@@ -23,4 +23,24 @@
 6. Tape vagrantcloud.com to See all os
    Centos with chef installed...
 
+7. Install ansible on acs vm
+   - tape vagrant ssh acs to connect
+   - sudo apt-get install ansible
+   - ansible --version for verification
+
+8. Install ansible on web vm centos
+   - connect with vagrant ssh web
+   - sudo yum install epel-release
+   - sudo yum install ansible
+   - vérification ansible --version
+
+9. Install ansible on db vm server
+  - connect with vagrant ssh db
+  - sudo yum install gcc
+  - sudo yum install python-setuptools
+  - sudo easy_install pip
+  - sudo yum install python-devel
+  - sudo pip install ansible
+  - ansible --version
+
 
