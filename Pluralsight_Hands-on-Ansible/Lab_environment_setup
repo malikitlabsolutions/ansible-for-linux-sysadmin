@@ -43,4 +43,20 @@
   - sudo pip install ansible
   - ansible --version
 
-
+10. Test environnent setup
+  - vagrant ssh acs
+  - mkdir exercise1
+  - cd exercise1
+  - vi inventory.ini
+      192.168.33.20
+      192.168.33.30
+  - cat inventory
+  - test ssh vagrant@192.168.33.20
+  - test ssh vagrant@192.168.33.30
+  - ansible 192.168.33.20 -i inventory -u vagrant -m ping -k
+  - ansible all -i inventory -u vagrant -m ping -k
+  - ansible 192.168.33.20 -i inventory -u vagrant -m ping -k -v
+  - ansible 192.168.33.20 -i inventory -u vagrant -m ping -k -vv
+  - ansible 192.168.33.20 -i inventory -u vagrant -m ping -k -vvv
+  - ansible all -i inventory -u vagrant -m command -a "/sbin/reboot"
+  - ansible all -i inventory -u vagrant -m command -a "/sbin/shutdown -h now"
