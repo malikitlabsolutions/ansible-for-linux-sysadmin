@@ -1,7 +1,10 @@
+0. Système operating système:
+   - Microsoft Windows 10 pro
+   - Mac OS
 
 1. Download vagrant (www.vagrantup.com)
 
-2. Install vagrant
+2. Install vagrant (manage vms)
 
 3. Download virtualBox (virtualBox.org)
 
