@@ -1,4 +1,5 @@
 ---
+# play1
 - hosts: webservers
   sudo: yes
 
@@ -9,6 +10,7 @@
   - name: Start Apache Services
     service: name=httpd enabled=yes state=started
 
+# play2
 - hosts: dbservers
   sudo: yes
 
