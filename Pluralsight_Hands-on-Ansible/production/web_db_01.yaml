@@ -21,6 +21,7 @@
   - name: Start MySQL
     service: name=mysqld state=started
 
+# play3
 - hosts: webservers:dbservers
   sudo: yes
 
